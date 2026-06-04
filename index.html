@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent for Smart Farming Advice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>AI Agent for Smart Farming Advice</h1>
+    <p>Powered by IBM watsonx Orchestrate</p>
+
+
+    <div id="root"></div>
+
+    <script>
+  window.wxOConfiguration = {
+    orchestrationID: "ced3123648164e3c86fca29476eee465_6495a74d-61bf-41ac-9a56-c985ec62dbfa",
+    hostURL: "https://us-south.watson-orchestrate.cloud.ibm.com",
+    rootElementID: "root",
+    deploymentPlatform: "ibmcloud",
+    crn: "crn:v1:bluemix:public:watsonx-orchestrate:us-south:a/ced3123648164e3c86fca29476eee465:6495a74d-61bf-41ac-9a56-c985ec62dbfa::",
+    chatOptions: {
+        agentId: "88933ff9-141c-4fa2-a382-198c8b7205f8", 
+    }
+  };
+  setTimeout(function () {
+    const script = document.createElement('script');
+    script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
+    script.addEventListener('load', function () {
+        wxoLoader.init();
+    });
+    document.head.appendChild(script);
+  }, 0);                     
+</script>
+
+</body>
+</html>
